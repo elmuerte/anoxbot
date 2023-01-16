@@ -2,6 +2,8 @@
 
 Mastodon bot posting quotes from Anachronox. The script to post quotes is quite simple, see `anoxbot.py`. The actual complexity is in creating the quote database.
 
+This script is repsonsible for the quotes posted at https://botsin.space/@anachronox
+
 ## Generating the quote database
 
 The quotes are extracted from decompiled APE (Anachronox Programming Language) files. 
