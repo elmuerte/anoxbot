@@ -16,8 +16,12 @@ To create the quote database run the `extract-quotes.py` with the files you proc
 
 The `extract-quotes.py` script partially parses the APE source files to construct dialogs as they could appear in the game. Many of the dialogs have variable conditions, the script takes a best effort to take these into account. Luckily the developers did not create too complex and overlapping conditions in the dialog. And various variable substitutions could be fixed with a simple lookup table.
 
-### Subtitle
+### Subtitles
 
 The `extract-quotes.py` script makes a distinciton between plain quotes, and subtitles. The latter are the subtitles in cinematics and are often fragments of a dialog.
 
-The subtitle quotes are stored in a separate table for further processing. Which is not finished yet.
+The subtitle quotes are stored in a separate table for further processing. 
+
+To process the subtitles into quotes you need the script files (with `.s` extension). The `assemble-subs.py` script takes the script files to process as its input arguments and tried to assemble quotes based on the parsed `.s` files.
+
+You will encouter a lot of errors concerning missing subtitles. These are probably not missing subtitles, the script is actually refering to "switch" sequences which are started.
