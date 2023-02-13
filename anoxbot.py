@@ -32,7 +32,7 @@ limit 1
 db.execute("update quotes set last_used = current_timestamp where id = ?", (quote[0],))
 db_conn.commit()
 
-postMsg = "{0}\n{1}".format(quote[1], quote[2])
+postMsg = "{0}\n{1}".format(quote[1].upper(), quote[2])
 print('Posting quote:', quote[0])
 #print(postMsg)
 
